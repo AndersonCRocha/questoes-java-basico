@@ -108,6 +108,7 @@ public class NatalForm {
       };
     } catch (Exception ex) {
       this.dayOfMonthTextField.setText("");
+      this.resultTextField.setText("");
       KeyboardUtils.showErrorMessage(frame, "Dia do mês inválido.");
     }
     return 0;

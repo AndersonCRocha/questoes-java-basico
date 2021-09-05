@@ -10,9 +10,13 @@ public class Application {
 
     int wonInPromotion = purchased / neededForPromotion;
     int amountLeft = purchased % neededForPromotion;
+    int total = wonInPromotion + amountLeft;
 
-    KeyboardUtils.showMessage(
-      "Ao final do segundo dia de promoção você terá um total de %d garrafas.".formatted(wonInPromotion + amountLeft)
+    KeyboardUtils.showMessage("""
+      Ao final do segundo dia de promoção você terá ganho um total de %d garrafas.
+      Sobrou %d garrafas
+      Ficou com total de %d garrafas
+      """.formatted(wonInPromotion, amountLeft, total)
     );
   }
 

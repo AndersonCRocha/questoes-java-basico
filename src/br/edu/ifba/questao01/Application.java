@@ -7,17 +7,15 @@ import java.util.Objects;
 
 public class Application {
 
-  private static PessoaRepository repository = new PessoaRepository();
+  private static final PessoaRepository repository = new PessoaRepository();
 
   public static void main(String[] args) {
     showMenu();
   }
 
   private static void showMenu() {
-    int chosenOption;
-
     do {
-      chosenOption = KeyboardUtils.readPositiveNumber("""
+      int chosenOption = KeyboardUtils.readPositiveNumber("""
         O que deseja fazer? (Digite o número referente a opção escolhida)
         1 - Incluir nova pessoa
         2 - Consultar quantidade de pessoas casadas cadastradas
